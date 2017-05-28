@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		
+		$("#id").focus(function(){
+			$("#id").css("background-image","none");
+		});
+		$("#id").blur(function(){
+			
+			if(!$("#id").val()){
+				$("#id").css("background-image", "url('../img/lightgreen.jpg')");
+			}
+		});
+		$("#password").focus(function(){
+			$("#password").css("background-image","none");
+		});
+		$("#password").blur(function(){
+			if(!$("#password").val()){
+			$("#password").css("background-image", "url('../img/lightgreen.jpg')");
+			}
+		});
+	});
+	//focus, blur(focus떠났을 때), val, css, if문
+</script>
+<style type="text/css">
+	.login{
+		background-image: url("../img/lightgreen.jpg");
+		
+	}
+</style>
+</head>
+<!-- <body onload="메소드 이름" >> 해당 메소드는 body에 소속된 내용들에 값이 다 들어간 후 실행 하라는 것. js사용할 때 필요함. -->
+<body>
+	<h1>로그인</h1>
+	<form name="form1">
+	아이디	&nbsp;&nbsp;<input type="text" id="id" class="login"><br>
+	비밀번호<input type="text" id="password" class="login">
+	</form>
+</body>
+</html>

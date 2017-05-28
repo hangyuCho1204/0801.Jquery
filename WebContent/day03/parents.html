@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//alert($("a").parents("li").eq(0).children().index());
+		//$("div").css("background-image", "url('../img/lightgreen.jpg')");
+		
+		var a = $("a").parent().eq(0).children();
+		var b = $("a").parent().eq(1).children();
+		var c = $("a").parent().eq(2).children();
+		
+		$(a).click(function(){
+			var url1 = '../' 
+			var pic = a.html();
+			url1 += pic;
+			
+			$("div").parents("body").css("background-image", 'url('+url1+')');
+		});
+		$(b).click(function(){
+			var url2 = '../' 
+			var pic = b.html();
+			url2 += pic;
+			
+			$("div").parents("body").css("background-image", 'url('+url2+')');
+		});
+		$(c).click(function(){
+			var url3 = '../' 
+			var pic = c.html();
+			url3 += pic;
+			
+			$("div").parents("body").css("background-image", 'url('+url3+')'); 
+		});
+		
+		return false;
+	});
+</script>
+<style type="text/css">
+	div{
+		width: 480px;
+		height: 300px;
+		padding-top: 20px;
+		background-size: 100% 100%;
+	}
+	ul{
+		padding: 10px 20px;
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+	
+</style>
+</head>
+<body>
+	
+	<div>
+		<ul id="menu">
+			<li class="item">
+				<a href="#">img/트와이스.jpg</a>
+			</li>
+			<li class="item">
+				<a href="#">img/ht.jpg</a>
+			</li>
+			<li class="item">
+				<a href="#">img/x.jpg</a>
+			</li>
+		</ul>
+	
+	</div>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn1").click(function(){
+			$("#box").css("color", "red");
+		});
+		$("#btn2").click(function(){
+			$("#box").css("background-color","blue");
+		});
+		$("#btn3").click(function(){
+			$("#box").addClass("box2");
+		});
+		$("#btn4").click(function(){
+			$("#box").removeClass("box2");
+		});
+	});
+</script>
+<style type="text/css">
+	.box1{
+		margin: 10px auto;
+		border: 5px solid #666;
+		padding : 30px;
+		text-align : center;
+	}
+	.box2{
+		margin: 10px auto;
+		border: 10px solid #FF00FF;
+		background-color : #ff0;
+		padding : 30px;
+		text-align : center;
+	}
+</style>
+</head>
+<!-- <body onload="메소드 이름" >> 해당 메소드는 body에 소속된 내용들에 값이 다 들어간 후 실행 하라는 것. js사용할 때 필요함. -->
+<body>
+	<h1>css 제어하기</h1>
+	<div id="box" class="box1"><h1>테스트 영역임다.</h1></div>
+	<input type="button" id="btn1" value="(폰트)red">
+	<input type="button" id="btn2" value="(배경)blue">
+	<input type="button" id="btn3" value="box2 클래스 적용">
+	<input type="button" id="btn4" value="box2 클래스 제거">
+</body>
+</html>

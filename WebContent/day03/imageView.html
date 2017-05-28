@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+
+<style type="text/css">
+	img{
+		width:100px;
+		height:100px;
+		margin:5px;	
+	}
+	ul{
+	width: 700;
+	marhin: auto;
+	list-style:none;	
+	}
+	ul li{
+		float: left;
+	}
+	div#grayLayer{
+		display:none;
+		position: fixed;
+		left: 0;
+		top: 0;
+		height:100%;
+		width:100%;
+		background: black;
+		opacity: 0.60;
+		
+	}
+	div#overLayer{
+		display:none;
+		position:fixed;
+		top:50%;
+		left:50%;
+		margin-top:-244px;
+		margin-left:-325px;
+	}
+	
+</style>
+<script type="text/javascript">
+	$(function(){
+		
+		
+		
+		$(".model:eq(0)").click(function(){
+			
+			$("#grayLayer").show().click(function(){
+				$("#grayLayer").remove();
+				$("#overLayer").remove();
+			});
+			$("#overLayer").show();
+			$("#overLayer").html("<img src='../img/트와이스.jpg'>").css("margin-top", "0px").css("margin-left", "0px");
+			return false;
+		});
+		$(".model:eq(1)").click(function(){
+			$("#grayLayer").show().click(function(){
+				$("#grayLayer").remove();
+				$("#overLayer").remove();
+			});
+			$("#overLayer").show();
+			$("#overLayer").html("<img src='../img/ht.jpg'>");
+			return false;
+		});
+		$(".model:eq(2)").click(function(){
+			$("#grayLayer").show().click(function(){
+				$("#grayLayer").remove();
+				$("#overLayer").remove();
+			});
+			$("#overLayer").show();
+			$("#overLayer").html("<img src='../img/x.jpg'>");
+			return false;
+		});
+	});
+</script>
+</head>
+<body>
+	<h1>show/hide/toggle</h1>
+	<div id="grayLayer"></div>
+	<div id="overLayer"></div>
+	<ul>
+		<li><a href="../img/트와이스.jpg" class="model" ><img src="../img/트와이스.jpg"></a></li>
+		<li><a href="../img/ht.jpg" class="model"><img src="../img/ht.jpg"></a></li>
+		<li><a href="../img/x.jpg" class="model"><img src="../img/x.jpg"></a></li>
+	</ul>
+		<div>
+			
+		</div>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var index = 1;
+		
+		$("img").click(function(){
+			index = (index%3)+1;
+			$(this).attr("src","../img/ht.jpg");
+			
+			
+		});
+	});
+</script>
+</head>
+<!-- <body onload="메소드 이름" >> 해당 메소드는 body에 소속된 내용들에 값이 다 들어간 후 실행 하라는 것. js사용할 때 필요함. -->
+<body>
+	<h1>속성 제어</h1>
+	<p>이미지를 클릭하세요</p>
+	<img  src="../img/트와이스.jpg" alt="이미지">
+</body>
+</html>

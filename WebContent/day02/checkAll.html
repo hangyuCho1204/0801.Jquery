@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#all_check").change(function(){
+			
+			var is_check = $(this).is(":checked");
+			$(".hobby_check").prop("checked", is_check);
+		});
+	});
+</script>
+</head>
+<!-- <body onload="메소드 이름" >> 해당 메소드는 body에 소속된 내용들에 값이 다 들어간 후 실행 하라는 것. js사용할 때 필요함. -->
+<body>
+	<h1>전체선택</h1>
+	<form name="form1">
+		<input type="checkbox" id="all_check" value="Y">전체선택
+		<hr>
+		<input type="checkbox" id="hobby1" class="hobby_check" value="축구">축구
+		<input type="checkbox" id="hobby2" class="hobby_check" value="야구">야구
+	</form>
+</body>
+</html>

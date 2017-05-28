@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		var i = 1;
+		//추가 버튼 클릭
+		$("input:eq(0)").click(function(){
+			var li1 = $("<li>").css("color", "red").html("추가항목"+(i++));
+			var li2 = $("<li>").css("color", "blue").html("추가항목"+(i++));
+			
+			li1.click(function(){
+				$(this).remove();
+			});
+			li2.click(function(){
+				$(this).remove();
+			});
+			
+			li1.appendTo($("ul"));//== li1.appendTo($("ul"));
+			$("ul").append(li2);
+		});
+		$("input:eq(1)").click(function(){
+			$("ul").empty();
+		});
+	});
+</script>
+<style type="text/css">
+	
+	
+</style>
+</head>
+<body>	
+	<input type="button" value="추가">
+	<input type="button" value="삭제">
+	<!-- 동적으로 요소가 추가될 태그 -->
+	<ul>
+		
+	</ul>	
+</body>
+</html>

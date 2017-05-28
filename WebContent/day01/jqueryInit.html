@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JqueryInit01</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	/* page로딩될 때 script내의 내용이 다 같이 실행이 됨. */
+	$(function(){
+		$("#hello").html("오늘 좋은 일만 생기기");
+		alert($("#hello").html());
+	})
+</script>
+<style type="text/css">
+	h1, h2 {}
+	#top{}
+	.note{}
+	li{}
+	p    a  {}/* p안에  a 태그들 */
+	p  > a  {}/* p요소 바로 아래 a태그들 */
+	p  + a  {}/* p다음에 바로 아래 a태그 한놈 */
+	h1 ~ p  {}/* h1의 형제 p태그를 말함 */
+</style>
+</head>
+<body>
+	<h1 id="hello"></h1>
+	<p id="text">안녕하세요. Jquery!!</p>
+</body>
+</html>

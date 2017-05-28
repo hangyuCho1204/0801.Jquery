@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("input[name='user_name']").change(function(){
+			alert("이름값이 변경 되었습니다.");
+			$("#result").html("이름의 입력 값이 변경 되었습니다.");
+		});
+	});	
+</script>
+</head>
+<body>
+	<div id="result"></div>
+	<form action="">
+		<div>
+			<input type="text" name="user_name">
+		</div>
+		<div>
+			<input type="checkbox" name="hobby">축구&nbsp;
+			<input type="checkbox" name="hobby">농구&nbsp;
+			<input type="checkbox" name="hobby">야구
+		</div>
+		<div>
+			<input type="radio" name="gender">남자&nbsp;
+			<input type="radio" name="gender">여자&nbsp;
+			<input type="radio" name="gender">중성
+		</div>
+		<div>
+			<select name="jab">
+				<option value="프로그래머">프로그래머
+				<option value="웹프블리셔">웹프블리셔
+				<option value="디자이너">디자이너
+			</select>
+		</div>
+		
+	</form>
+</body>
+</html>

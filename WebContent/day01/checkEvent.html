@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#input").click(function(){
+			$("#hello").html("check1");
+		});
+		$("#input").dblclick(function(){
+			$("#hello").html("dblcheck1");
+		});
+		
+	
+		
+		/* $("#input").hover(function(){
+			$("hello").html("dblcheck");
+		},function(){
+			$("hello").html("dblcheck");
+		}); */
+		/* hover : 마우스가 올라갔을 때 이벤트와 내려왔을 때 이벤트를 따로 지정 해준다.*/
+		/* $("").hover(function(){},function(){}); */
+	});
+</script>
+</head>
+<body>
+
+
+	<div id="input">
+		<h1 >눌러주세요</h1>
+	</div>
+	<div id="hello">	</div>
+</body>
+</html>

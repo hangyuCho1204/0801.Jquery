@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#input").mousedown(function(){
+			$("#result").html("마우스 다운이 작동 되었습니다.");
+		});
+
+		$("#input").mouseup(function(){
+			$("#result").html("마우스 업이 작동 되었습니다.");
+		});
+	
+	
+		$("#input").mouseenter(function(){
+			$("#result").html("마우스가 영역 안으로 들어 갔습니다.");
+		});
+
+		$("#input").mouseleave(function(){
+			$("#result").html("마우스가 영역을 벗어 났습니다.");
+		});
+	});
+	// mouseup, mouseenter, mouseleave
+</script>
+</head>
+<body>
+	<h1>마우스 이벤트 확인하기</h1>
+	<div id="input">
+		안에다 마우스 커서 가져다 놓아보세요
+	</div>
+	<h2>결과</h2>
+	<div id="result"></div>
+</body>
+</html>
